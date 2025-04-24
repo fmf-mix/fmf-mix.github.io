@@ -8,13 +8,12 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #fdedec, #ffffff); /* Simple pink to white gradient */
+      background: linear-gradient(to bottom, #ffcdd2, #ffffff); /* Simple pink to white gradient */
       color: #003366;
       text-align: center;
-      text-transform: lowercase;
     }
     header {
-      padding: 3rem 1rem 1.5rem;
+      padding: 3rem 1rem 0rem;
       background: none;
       color: #0000ee;
       font-weight: bold;
@@ -40,6 +39,7 @@
     }
     .audio-wrapper {
       margin: 2rem 0;
+      text-align: center;
     }
     .audio-toggle {
       display: flex;
@@ -47,12 +47,12 @@
       gap: 1rem;
       margin-bottom: 1rem;
     }
-    .pricing-list {
-      margin: 0 auto;
-      max-width: 400px;
-      text-align: left;
-      font-size: 1.1rem;
-      line-height: 2;
+    .bodies {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: left;
+  line-height: 1.5;
+}
     }
     button {
       background-color: #00bfff;
@@ -81,32 +81,38 @@
     findmyfriends
   </header>
   
-  <p>i like mixing and do a good job. specialize in making home recordings sound good </p>
 
-  <section id="stuff-ive-done">
-    <h2>stuff i've done</h2>
-    <div class="project-links">
-      <a href="https://findmyfriends.bandcamp.com/album/find-my-friends" target="_blank">find my friends</a>
-      <p>recorded, mixed</p>
-      <a href="https://feeblelittlehorse.bandcamp.com/track/this-is-real" target="_blank">this is real</a>
-      <a href="https://feeblelittlehorse.bandcamp.com/album/girl-with-fish" target="_blank">girl with fish</a>
-      <a href="https://yourbandcampproject3.bandcamp.com" target="_blank">something else</a>
-    </div>
-  </section>
+    <section id="some stuff-ive-done">
+      <h2>some stuff i've done</h2>
+      <div class="project-links">
+        <span>find my friends - </span><a href="https://findmyfriends.bandcamp.com/album/find-my-friends" target="_blank" style="display: inline;">find my friends</a><span style="display: inline;"> (recorded, mixed)</span><br><br>
+        
+        <span>feeble little horse - </span><a href="https://feeblelittlehorse.bandcamp.com/track/this-is-real" target="_blank" style="display: inline;">This Is Real</a><span style="display: inline;"> (recorded, mixed)</span><br><br>
+    
+        <span>feeble little horse - </span><a href="https://feeblelittlehorse.bandcamp.com/album/girl-with-fish" target="_blank" style="display: inline;">Girl with Fish</a><span style="display: inline;"> (recorded, mixed)</span><br><br>
+        
+        <span>Decor Hans - </span><a href="https://decorhans.bandcamp.com/album/wrat-mobile-blue-sill-single" target="_blank" style="display: inline;">WRAT Mobile / Blue Sill</a><span style="display: inline;"> (mixed, mastered)</span><br><br>
+        
+        <span>Nectarine Girl - </span><a href="https://music.youtube.com/watch?v=AqWExanN1XU" target="_blank" style="display: inline;">aubergine</a><span style="display: inline;"> (mixed)</span><br><br>
+    
+      </div>
+    </section>
+
 
   <section id="what-does-it-cost">
     <h2>what does it cost</h2>
-    <div class="pricing-list">
+    <div class="bodies">
       <p>i charge $200-$300 per mix, depending on the artist's means and how involved the project is. multiple tracks or albums will be cheaper </p>
     </div>
   </section>
 
   <section id="the-magic-touch">
     <h2>the magic touch</h2>
-
+     <div class="bodies">
+<p>i have much experience working with home recordings. probably my biggest advantage over "professional" mixer babies who only know how to make studio recordings sound good.... dumbass they already sound good they were made in a studio......</p>
     <!-- example 1 -->
     <div class="audio-wrapper">
-      <p>track 1</p>
+      <p><strong>track 1</strong></p>
       <div class="audio-toggle">
         <button onclick="playSample('before1', 'after1')">before</button>
         <button onclick="playSample('after1', 'before1')">after</button>
@@ -123,7 +129,7 @@
     
     <!-- example 2 -->
     <div class="audio-wrapper">
-      <p>track 2</p>
+      <p><strong>track 2</strong></p>
       <div class="audio-toggle">
         <button onclick="playSample('before2', 'after2')">before</button>
         <button onclick="playSample('after2', 'before2')">after</button>
@@ -140,7 +146,7 @@
     
     <!-- example 3 -->
     <div class="audio-wrapper">
-      <p>track 3</p>
+      <p><strong>track 3</strong></p>
       <div class="audio-toggle">
         <button onclick="playSample('before3', 'after3')">before</button>
         <button onclick="playSample('after3', 'before3')">after</button>
