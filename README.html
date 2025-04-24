@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>findmy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #a8e4ff, #ffffff);
+      color: #003366;
+      text-align: center;
+      text-transform: lowercase;
+    }
+    header {
+      padding: 3rem 1rem 1.5rem;
+      background: none;
+      color: #0000ee;
+      font-weight: bold;
+      font-size: 2.75rem;
+      text-shadow: none;
+    }
+    section {
+      padding: 2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.75rem;
+    }
+    .project-links a {
+      display: block;
+      color: #0059b2;
+      margin: 0.5rem 0;
+      text-decoration: none;
+    }
+    .project-links a:hover {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+    .audio-wrapper {
+      margin: 2rem 0;
+    }
+    .audio-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .pricing-list {
+      margin: 0 auto;
+      max-width: 400px;
+      text-align: left;
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+    button {
+      background-color: #00bfff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: lowercase;
+    }
+    button:hover {
+      background-color: #0000ee;
+    }
+    audio {
+      width: 90%;
+      max-width: 600px;
+      margin: 0.5rem auto;
+      display: block;
+      background: #e0f7ff;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    findmyfriends
+  </header>
+  
+  <p>i like mixing and do a good job. specialize in making home recordings sound good </p>
+
+  <section id="stuff-ive-done">
+    <h2>stuff i've done</h2>
+    <div class="project-links">
+      <a href="https://yourbandcampproject1.bandcamp.com" target="_blank">find my friends</a>
+      <a href="https://yourbandcampproject2.bandcamp.com" target="_blank">girl with fish</a>
+      <a href="https://yourbandcampproject3.bandcamp.com" target="_blank">something else</a>
+    </div>
+  </section>
+
+  <section id="what-does-it-cost">
+    <h2>what does it cost</h2>
+    <div class="pricing-list">
+      <p>i charge $200-$300 per mix, depending on the artist's means and how involved the project is. multiple tracks or albums will be cheaper </p>
+    </div>
+  </section>
+
+  <section id="the-magic-touch">
+    <h2>the magic touch</h2>
+
+    <!-- example 1 -->
+    <div class="audio-wrapper">
+      <p>track 1</p>
+      <div class="audio-toggle">
+        <button onclick="playSample('before1', 'after1')">before</button>
+        <button onclick="playSample('after1', 'before1')">after</button>
+      </div>
+      <audio id="before1" controls>
+        <source src="assets/before1.mp3" type="audio/mp3">
+        your browser does not support the audio element.
+      </audio>
+      <audio id="after1" controls>
+        <source src="assets/after1.mp3" type="audio/mp3">
+        your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- example 2 -->
+    <div class="audio-wrapper">
+      <p>track 2</p>
+      <div class="audio-toggle">
+        <button onclick="playSample('before2', 'after2')">before</button>
+        <button onclick="playSample('after2', 'before2')">after</button>
+      </div>
+      <audio id="before2" controls>
+        <source src="assets/before2.mp3" type="audio/mp3">
+        your browser does not support the audio element.
+      </audio>
+      <audio id="after2" controls>
+        <source src="assets/after2.mp3" type="audio/mp3">
+        your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- example 3 -->
+    <div class="audio-wrapper">
+      <p>track 3</p>
+      <div class="audio-toggle">
+        <button onclick="playSample('before3', 'after3')">before</button>
+        <button onclick="playSample('after3', 'before3')">after</button>
+      </div>
+      <audio id="before3" controls>
+        <source src="assets/before3.mp3" type="audio/mp3">
+        your browser does not support the audio element.
+      </audio>
+      <audio id="after3" controls>
+        <source src="assets/after3.mp3" type="audio/mp3">
+        your browser does not support the audio element.
+      </audio>
+    </div>
+  </section>
+
+  <script>
+    function playSample(currentId, otherId) {
+      const current = document.getElementById(currentId);
+      const other = document.getElementById(otherId);
+      const currentTime = other.currentTime;
+      other.pause();
+      current.currentTime = currentTime;
+      current.play();
+    }
+  </script>
+</body>
+</html>
 
